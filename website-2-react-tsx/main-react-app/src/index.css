@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 210vh;
+  background: #ffffff;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.container.dark {
+  background-image: url(assets/background-3.png);
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container-1 {
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.container-1.dark {
+  background-image: url(assets/background-3.png);
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container-grid {
+  max-width: 900px;
+  text-align: center;
+  display: inline-block;
+  margin: 450px 0 0 0;
+}
+
+.card {
+  max-width: 250px;
+  border: 1px solid rgba(128, 128, 128, 0.425);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  margin: 10px;
+  margin-top: 50px;
+  background: linear-gradient(35deg, #4e4e4e, rgb(36, 36, 36));
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.card-image {
+  max-width: 96%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card-name {
+  font-family: Arial, sans-serif;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.card-text {
+  color: rgb(218, 218, 218);
+  font-family: Arial, sans-serif;
+}
+
+.dark .card {
+  background: #30303056;
+  backdrop-filter: 15px;
+  border: 1px solid rgb(189, 189, 189);
+  box-shadow: 0px 0px 2px rgb(94, 94, 94);
+}
+
+.dark .card-name {
+  color: #ffffff;
+}
+
+.dark .card-text {
+  color: #ffffff;
+}
+
+.button {
+  position: relative;
+  display: inline-flex;
+  height: 2rem;
+  overflow: hidden;
+  border-radius: 9999px;
+  border: none;
+  padding: 0.10rem;
+  outline: none;
+}
+
+.button:focus {
+  outline: 1px solid #9ca3af;
+  outline-offset: 0.5rem;
+}
+
+.button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: -1000%;
+  background: conic-gradient(from 90deg at 50% 50%, #000000 0%, #000000 50%, #E2CBFF 100%);
+  animation: spin 2s linear infinite;
+}
+
+.button>.button-inner {
+  display: inline-flex;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: #171717;
+  padding: 0.25rem 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #f9fafb;
+  backdrop-filter: blur(12px);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
